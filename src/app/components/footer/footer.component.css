@@ -1,0 +1,12 @@
+hr {
+    width: 98%;
+    margin-bottom: 20px;
+}
+  
+footer {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 0.9rem;
+    bottom: 0;
+}
