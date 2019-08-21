@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title: String;
-  
+  todos: String[];;
+  myClass: String[];
+  inputData: String;
+
 
   constructor() {
     this.title = "My TodoList";
-   }
+    this.todos = [];
+    this.myClass = [];
+    this.inputData = "";
+  }
+
+  @Output() todo = new EventEmitter();
+
+  add() {
+    this.todos.push(this.inputData);
+    this.myClass.push("");
+    this.inputData = "";
+  }
+
+  sendTodo(tableTodo) {
+    this.todo.emit(tableTodo);
+    console.log(tableTodo.length);
+  }
 
   ngOnInit() {
   }
-
 }

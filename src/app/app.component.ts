@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todoList';
+  tl: String[];
+
+
+  updateList(e: any){
+    this.tl = e;
+  }
 }

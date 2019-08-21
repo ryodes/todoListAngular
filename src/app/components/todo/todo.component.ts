@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo',
@@ -6,28 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  public todo;
+
   inputData: String = "";
   myClass;
+  @Input() todos: String[];
 
   constructor() {
-    this.todo = [];
-    this.myClass = [];
+
   }
 
   ngOnInit() {
   }
 
-  add() {
-    if (this.inputData.length > 0) {
-      this.todo.push(this.inputData);
-      this.myClass.push("");
-      this.inputData = "";
-    }
-  }
-
   delete(index) {
-    this.todo.splice(index, 1);
+    this.todos.splice(index, 1);
     this.myClass.splice(index, 1);
   }
 
