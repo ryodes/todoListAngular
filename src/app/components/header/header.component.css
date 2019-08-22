@@ -8,15 +8,8 @@ div input{
     width: 450px;
 }
 
-.line{
-    text-decoration: line-through;
-}
-
 h1,div{
     text-align: center;
-}
-div div div {
-    text-align: left;
 }
 
 button{

@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tl: String[];
+  tl: String[] = [];
+  tc: String[] = [];
 
-
-  updateList(e: any){
-    this.tl = e;
+    // Stock dans tl le tableau todos du fils et dans tc le tableau myClass du même fils
+  updateList(e: any) {
+    if (e[0] == "" || e[0] == "line") {
+      this.tc = e;
+    } else {
+      this.tl = e;
+    }
   }
 }

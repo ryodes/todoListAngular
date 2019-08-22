@@ -1,5 +1,5 @@
-<app-header [todos]="tl"></app-header>
+<app-header (emitter)="updateList($event)" ></app-header>
 <div>
-  <app-todo (todos)="updateList($event)"></app-todo>
+    <app-todo [todos]="tl" [myClass]="tc"></app-todo>
 </div>
 <app-footer></app-footer>

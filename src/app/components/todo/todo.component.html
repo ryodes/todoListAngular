@@ -1,10 +1,11 @@
 <div>
 <div *ngIf="todos.length > 0">
-    <ul *ngFor="let list of todos; index as i;">
+    <ul *ngFor="let elem of todos; index as i;">
       <li>
         <button (click)="delete(i)"> Delete </button>
-        <a href="#" [class]="myClass[i]" (click)="onlineDeline(i)"> {{ list }} </a>
+        <a href="#" [class]="myClass[i]" (click)="onlineDeline(i)"> {{ elem }} </a>
       </li>
     </ul>
   </div>
 </div>
+

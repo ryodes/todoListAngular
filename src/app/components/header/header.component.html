@@ -1,6 +1,6 @@
 <h1> {{title}} </h1>
 
 <div class="text-center">
-  <input type="text" [(ngModel)]="inputData" name="todo" placeholder="enter your list">
-  <button (click)="add()" (click)="sendTodo(todos)"> Add </button>
+  <input type="text" [(ngModel)]="inputData" name="todo" placeholder="enter your task">
+  <button (click)="add()" (click)="sendTodo(todos)" (click)="sendClass(myClass)"> Add </button>
 </div>

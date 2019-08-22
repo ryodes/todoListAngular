@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  inputData: String = "";
-  myClass;
+  @Input() myClass: String[];
   @Input() todos: String[];
 
   constructor() {
@@ -18,15 +17,18 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
   }
 
+  //Delete avec le button les tache qu'on veut supprimer
   delete(index) {
-    this.todos.splice(index, 1);
     this.myClass.splice(index, 1);
+    this.todos.splice(index, 1);
   }
 
+
+  //Barre ou débarre les tache ou l'en clique dessus
   onlineDeline(index) {
     if (this.myClass[index] == '')
-        this.myClass[index] = 'line';
+      this.myClass[index] = 'line';
     else
-        this.myClass[index] = '';
+      this.myClass[index] = '';
   }
 }
